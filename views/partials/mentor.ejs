@@ -1,0 +1,32 @@
+<div class="col-sm-4">
+  <img class="img-responsive" src="http://placehold.it/750x450">
+  <h3><%= mentor.first_name %> <%= mentor.last_name %> <small><%= mentor.role %></small></h3>
+  <h4><%= mentor.subteam %></h4>
+  <h4><a href="<%= mentor.company_url %>"><%= mentor.company_name %></a></h4>
+
+  <ul class="list-unstyled list-inline list-social-icons">
+    <% if (mentor.email != undefined && mentor.email != "") { %>
+    <li class="tooltip-social email-link"><a href="mailto:<%= mentor.email %>" data-toggle="tooltip" data-placement="top" title="Email"><i class="fa fa-envelope fa-2x"></i></a></li>
+    <% } %>
+
+    <% if (mentor.phone != undefined && mentor.phone != "") { %>
+    <li class="tooltip-social phone-link"><a><i rel="popover" data-toggle="popover" data-placement="top" title="" data-content="<%= mentor.phone %>" class="fa fa-phone-square fa-2x"></a></i></li>
+    <% } %>
+
+    <% if (mentor.facebook_url != undefined && mentor.facebook_url != "") { %>
+    <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+    <% } %>
+
+    <% if (mentor.linkedin_url != undefined && mentor.linkedin_url != "") { %>
+    <li class="tooltip-social linkedin-link"><a href="<%= mentor.linkedin_url %>" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+    <% } %>
+
+    <% if (mentor.twitter_url != undefined && mentor.twitter_url != "") { %>
+    <li class="tooltip-social twitter-link"><a href="<%= mentor.twitter_url %>" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+    <% } %>
+
+    <% if (mentor.google_plus_url != undefined && mentor.google_plus_url != "") { %>
+    <li class="tooltip-social google-plus-link"><a href="<%= mentor.google_plus_url %>" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+    <% } %>
+  </ul>
+</div>

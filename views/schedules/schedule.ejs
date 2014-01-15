@@ -1,0 +1,29 @@
+<div id="week-<%= schedule.week %>" class="panel panel-default">
+  <div class="panel-heading"><h3><%= schedule.title %></h3></div>
+
+  <table class="table">
+    <tr>
+      <th class="col-sm-1">Day</th>
+      <th class="col-sm-1">Location</th>
+      <th class="col-sm-2">Time</th>
+      <th class="col-sm-6">Tasks</th>
+      <th class="col-sm-2">Mentor</th>
+    </tr>
+    <% for (var day = 0; day < schedule.schedule.length; day++) { %>
+    <% var schedule_day = schedule.schedule[day] %>
+    <tr>
+      <td><%= schedule_day.date.toFormat("DDDD") %></td>
+      <td><%= schedule_day.location %></td>
+      <td><%= schedule_day.start_time.toFormat("H:MI PP") %> - <%= schedule_day.end_time.toFormat("H:MI PP") %></td>
+      <td>
+        <ul>
+          <% for (var index = 0; index < schedule_day.tasks.length; index++) { %>
+          <li><%= schedule_day.tasks[index].task %></li>
+          <% } %>
+        </ul>
+      </td>
+      <td><%= schedule_day.mentor %></td>
+    </tr>
+    <% } %>
+  </table>
+</div>

@@ -1,0 +1,30 @@
+<%- layout('../layout') -%>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-12">
+      <h2 class="page-header">Our Mentors</h2>
+    </div>
+  </div>
+
+<% for(var index = 0; index < mentors.length; index++) { %>
+  <% var mentor = mentors[index]; %>
+  
+  <% if ((index % 3) == 0) { %>
+  <div class="row">
+  <% } %>
+
+    <%- include ../partials/mentor %>
+
+  <% if ((index % 3) == 2) { %>
+  </div>
+  <% } %>
+<% } %>
+
+</div>
+
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/modern-business.js"></script>
+<script src="/js/site.js"></script>
