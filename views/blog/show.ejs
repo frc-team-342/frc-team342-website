@@ -8,19 +8,26 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-8 col-lg-offset-2">
       <div class="post">
         <h1><%= post.title %></h1>
+
         <p class="lead">by <%= post.author %></p>
+
         <hr>
+
         <div>
           <i class="fa fa-clock-o"></i> Posted on <%= post.date.toFormat("DDDD, MMMM D, YYYY H:MI PP") %>
-        </div> 
+        </div>
+
         <hr>
+        <% if (post.image_url != undefined && post.image_url != "") { %>
+        <img src="http://placehold.it/900x300" class="img-responsive">
+        <hr>
+        <% } %>
         <p class="post-content"><%- post.content %></p>
         <hr>
       </div>
-      </p>
     </div>
   </div>
 </div>
