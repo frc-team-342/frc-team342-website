@@ -8,4 +8,7 @@ $(function () {
 	};
 
 	$("[rel=popover]").popover();
+
+
+	}
 });

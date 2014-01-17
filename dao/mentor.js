@@ -27,7 +27,7 @@ function MentorDAO(db) {
 	}
 
 	this.findBySubteam = function(subteam, callback) {
-		mentors.find().toArray(function(err, result) {
+		mentors.find({'subteam': subteam}).toArray(function(err, result) {
 			if (err) {
 				callback(err, null);
 			} else {
@@ -43,7 +43,6 @@ function MentorDAO(db) {
 			if (err) {
 				callback(err, null);
 			} else {
-				console.log(result);
 				callback(err, result);
 			}
 		});

@@ -16,11 +16,11 @@
       <td><%= schedule_day.location %></td>
       <td><%= schedule_day.start_time.toFormat("H:MI PP") %> - <%= schedule_day.end_time.toFormat("H:MI PP") %></td>
       <td>
-        <ul>
+        <ol>
           <% for (var index = 0; index < schedule_day.tasks.length; index++) { %>
           <li><%= schedule_day.tasks[index].task %></li>
           <% } %>
-        </ul>
+        </ol>
       </td>
       <td><%= schedule_day.mentor %></td>
     </tr>

@@ -1,0 +1,44 @@
+<%- layout('../layout') -%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header">Team 342 Blog</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8">
+    <% for (var i = 0; i < posts.length; i++) { %>
+      <div class="post">
+        <h1><%= posts[i].title %></h1>
+        <p class="lead">by <%= posts[i].author %></p>
+        <hr>
+        <div>
+          <i class="fa fa-clock-o"></i> Posted on <%= posts[i].date.toFormat("DDDD, MMMM D, YYYY H:MI PP") %>
+        </div> 
+        <hr>
+        <p class="post-content"><%- shorten_post(posts[i].content, 500) %></p>
+        <a class="btn btn-primary" href="/blog/<%= posts[i].permalink %>">Read More</a>
+        <hr>
+      </div>
+    <% } %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="pagination pagination-right">
+        <% for (var i = 0; i < page_count; i++) { %>
+          <% if (page == (i + 1)) {%>
+            <li class="active">
+          <% } else { %>
+            <li>  
+          <% } %>
+              <a href="/blog?page=<%= (i + 1) %>"><%= (i + 1) %></a>
+            </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>  
+</div>

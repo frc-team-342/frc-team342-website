@@ -3,6 +3,7 @@ var HomeController = require('./home_controller');
 var MentorController = require('./mentor_controller');
 var ScheduleController = require('./schedule_controller');
 var SubteamController = require('./subteam_controller');
+var PostController = require('./post_controller');
 
 module.exports = exports = function(app, db) {
   var homeController = new HomeController(db);
@@ -10,6 +11,7 @@ module.exports = exports = function(app, db) {
   var scheduleController = new ScheduleController(db);
   var aboutController = new AboutController(db);
   var subteamController = new SubteamController(db);
+  var postController = new PostController(db);
 
   app.get('/', homeController.index);
 
@@ -29,4 +31,9 @@ module.exports = exports = function(app, db) {
   app.get('/schedules/:subteam.:format?', scheduleController.show);
 
   app.get('/subteams.:format?', subteamController.index);
+  app.get('/subteams/:subteam.:format?', subteamController.show);
+
+  // Blog routes.
+  app.get('/blog.:format?', postController.index);
+  app.get('/blog/:permalink.:format?', postController.show);
 }

@@ -5,3 +5,10 @@
 .phone-link a:hover {
   color: #3b5998;
 };
+
+.post p {
+  white-space: pre-wrap;
+  max-width: 100%;
+  padding: 4px;
+  border: 8px solid #dddddd;
+}
