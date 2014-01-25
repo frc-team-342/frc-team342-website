@@ -1,0 +1,128 @@
+db.awards.drop();
+
+var awards = [
+	{
+		"year": 2000,
+		"awards": [
+			"FL Regional - Rookie All-Star Award",
+			"FL Regional - J&amp;J Sportsmanship",
+			"FL Regional - Finalist"
+		]
+	},
+		{
+		"year": 2001,
+		"awards": [
+			"FL Regional - Imagery",
+			"FL Regional - Leadership in Controls",
+			"FL Regional - Incredible Play of the Day",
+			"FL Regional - &#35;1 Seeded Team",
+			"FL Regional - Finalist"
+		]
+	},
+		{
+		"year": 2002,
+		"awards": [
+			"FL Regional - Chairman's Award",
+			"FL Regional - Judge's Award"
+		]
+	},
+		{
+		"year": 2003,
+		"awards": [
+			"FL Regional - Engineering Inspiration Award",
+			"FL Regional - Website Design Award",
+			"FL Regional - Autodesk Award for Visualization"
+		]
+	},
+		{
+		"year": 2004,
+		"awards": [
+			"SC Regional - Autodesk Award for Visualization",
+			"SC Regional - CMP Autodesk Inventor Award",
+			"SC Regional - Chairman's Award"
+		]
+	},
+		{
+		"year": 2005,
+		"awards": [
+			"SC Regional - J&amp;J Sportsmanship",
+			"SC Regional - Safety Award",
+			"SC Regional - Chairman's Award",
+			"FL Regional - Engineering Inspiration Award",
+			"FL Regional - Autodesk Visualization Award"
+		]
+	},
+	{
+		"year": 2006,
+		"awards": [
+			"FL Regional - Imagery",
+			"SC Regional - Autodesk Visualization Award",
+			"SC Regional - J&amp;J Sportsmanship",
+			"SC Regional - CMP Autodesk Inventor Award - Hon Mention"
+		]
+	},
+		{
+		"year": 2007,
+		"awards": [
+			"SC Regional - J&amp;J Sportsmanship",
+			"SC Regional - UL Industrial Safety Award",
+			"SC Regional - Champion",
+			"FL Regional - KPC&amp;B Entrepreneurship",
+			"FL Regional - Autodesk Visualization Award"
+		]
+	},
+		{
+		"year": 2008,
+		"awards": [
+			"SC Regional - Finalist",
+			"SC Regional - KPC&amp;B Entrepreneurship",
+			"SC Regional - Motorola Quality Award",
+			"SC Regional - Website Award",
+			"SC Regional - Finalist",
+			"FL Regional - Finalist"
+		]
+	},
+		{
+		"year": 2009,
+		"awards": [
+			"Peachtree Regional - Finalist",
+			"Peachtree Regional - General Motors Industrial Design Award",
+			"Peachtree Regional - 2nd Place Overall",
+			"Palmetto Regional - 6th Place Overall",
+			"Palmetto Regional - &#35;2 Seeded Team",
+			"Palmetto Regional - FRC Website Excellence Award",
+			"Palmetto Regional - FRC National Safety Animation Award"
+		]
+	},
+		{
+		"year": 2010,
+		"awards": [
+			"Palmetto Regional - Chairman's Award",
+			"Palmetto Regional - Excellence in Design Animation Award",
+			"Palmetto Regional - Controls Innovation Award"
+		]
+	},
+		{
+		"year": 2011,
+		"awards": [
+			"NC Regional – Industrial Design Award",
+			"NC Regional - 3rd Place Overall",
+			"NC Regional - Semi-Finalist",
+			"NC Regional - &#35;2 Seeded Team"
+		]
+	},
+		{
+		"year": 2012,
+		"awards": [
+			"Palmetto Regional - Engineering Inspiration Award",
+		]
+	},
+		{
+		"year": 2013,
+		"awards": [
+			"Palmetto Regional - Safety Award",
+		]
+	}
+]
+
+for (var i = 0; i < awards.length; i++) { db.awards.insert(awards[i]); }

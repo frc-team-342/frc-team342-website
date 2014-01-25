@@ -1,0 +1,12 @@
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2><%= award.year %></h2>
+    </div>
+    <ul class="list-group">
+      <% for (var award_index = 0; award_index < award.awards.length; award_index++) { %>
+      <li class="list-group-item"><%= award.awards[award_index] %></li>
+      <% } %>
+    </ul>
+  </div>
+</div>

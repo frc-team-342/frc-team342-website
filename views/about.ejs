@@ -37,205 +37,25 @@ Team 342 is located in North Charleston, SC and has close to forty members from 
   </div>
 </div>
 
-  <div class="row">
-    <div class="col-lg-12">
-        <h2 class="page-header">Awards</h2>
-    </div>
+<div class="row">
+  <div class="col-lg-12">
+      <h2 class="page-header">Awards</h2>
   </div>
+</div>
 
+<% for(var index = 0; index < awards.length; index++) { %>
+  <% var award = awards[index]; %>
+  
+  <% if ((index % 4) == 0) { %>
   <div class="row">
-    <div class="col-lg-3">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2013</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">Palmetto Regional Safety Award</li>
-        </ul>
-      </div>
-    </div>
+  <% } %>
 
-    <div class="col-lg-3">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2012</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">Palmetto Regional - Engineering Inspiration Award</li>
-        </ul>
-      </div>
-    </div>
+    <%- include partials/award %>
 
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2011</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">NC Regional – Industrial Design Award</li>
-          <li class="list-group-item">NC Regional 3rd Place Overall</li>
-          <li class="list-group-item">NC RegionalSemi-Finalist</li>
-          <li class="list-group-item">NC Regional &#35;2 Seeded Team in qualifying matches</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2010</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">Palmetto Regional - Chairman's Award</li>
-          <li class="list-group-item">Palmetto Regional Excellence in Design Animation Award</li>
-          <li class="list-group-item">Palmetto Regional Controls Innovation Award</li>
-        </ul>
-      </div>
-    </div>
+  <% if ((index % 4) == 3) { %>
   </div>
-
-  <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2009</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">Peachtree Regional Finalist</li>
-          <li class="list-group-item">General Motors Industrial Design Award</li>
-          <li class="list-group-item">2nd Place Overall</li>
-          <li class="list-group-item">Palmetto Regional 6th Place Overall</li>
-          <li class="list-group-item">&#35;2 Seeded Team in Qualifying matches</li>
-          <li class="list-group-item">FRC Website Excellence Award</li>
-          <li class="list-group-item">FRC National Safety Animation Award</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2008</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">SC Regional Finalist</li>
-          <li class="list-group-item">SC KPC&amp;B Entrepreneurship</li>
-          <li class="list-group-item">SC Motorola Quality Award</li>
-          <li class="list-group-item">SC Website Award</li>
-          <li class="list-group-item">FL Regional Finalist</li>
-          <li class="list-group-item">SC Regional Finalist</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2007</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">SC J&amp;J Sportsmanship</li>
-          <li class="list-group-item">SC UL Industrial Safety Award</li>
-          <li class="list-group-item">SC Regional Champion</li>
-          <li class="list-group-item">FL KPC&amp;B Entrepreneurship</li>
-          <li class="list-group-item">FL Autodesk Visualization Award</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2006</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">FL Imagery</li>
-          <li class="list-group-item">SC Autodesk Visualization Award</li>
-          <li class="list-group-item">SC J&amp;J Sportsmanship</li>
-          <li class="list-group-item">CMP Autodesk Inventor Award - Hon Mention</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2005</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">SC J&amp;J Sportsmanship</li>
-          <li class="list-group-item">SC Safety Award</li>
-          <li class="list-group-item">SC Regional Chairman's Award</li>
-          <li class="list-group-item">FL Engineering Inspiration Award</li>
-          <li class="list-group-item">FL Autodesk Visualization Award</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2004</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">SC Autodesk Award for Visualization</li>
-          <li class="list-group-item">CMP Autodesk Inventor Award</li>
-          <li class="list-group-item">SC Regional Chairman's Award</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2003</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">FL Engineering Inspiration Award</li>
-          <li class="list-group-item">FL Website Design Award</li>
-          <li class="list-group-item">FL Autodesk Award for Visualization</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2002</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">FL Regional Chairman's Award</li>
-          <li class="list-group-item">FL Judge's Award</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2001</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">FL Imagery</li>
-          <li class="list-group-item">FL Leadership in Controls</li>
-          <li class="list-group-item">FL Incredible Play of the Day</li>
-          <li class="list-group-item">FL &#35;1 Seed</li>
-          <li class="list-group-item">FL Finalist</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2>2000</h2>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">FL Rookie All-Star Award</li>
-          <li class="list-group-item">FL J&amp;J Sportsmanship</li>
-          <li class="list-group-item">FL Finalist</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <% } %>
+<% } %>
 </div>
 
 <!--
