@@ -1,11 +1,13 @@
 var async = require('async');
 var MentorDAO = require('../dao/mentor').MentorDAO;
 var StudentDAO = require('../dao/student-dao').StudentDAO;
+var SubteamDAO = require('../dao/subteam-dao').SubteamDAO;
 
 function SubteamController(db) {
 
 	var mentorDao = new MentorDAO(db);
 	var studentDao = new StudentDAO(db);
+	var subteamDao = new SubteamDAO(db);
 
 	this.index = function(req, res) {
 		res.format({
@@ -19,6 +21,15 @@ function SubteamController(db) {
 		var subteam = req.params.subteam;
 
 		async.parallel({
+			subteam: function(callback) {
+				subteamDao.findByName(subteam, function(err, subteam) {
+					if (err) {
+						callback(err, null);
+					} else {
+						callback(err, subteam);
+					}
+				});
+			},
 			mentors: function(callback) {
 				var options = {fields: {'subteam': 0}};
 				mentorDao.findBySubteam(subteam, options, function(err, mentors){
@@ -41,7 +52,6 @@ function SubteamController(db) {
 				});
 			}
 		}, function(err, subteam) {
-			subteam.name = req.params.subteam;
 			res.format({
 				html: function() {
 					res.render('subteams/show', subteam);
