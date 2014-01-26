@@ -63,6 +63,7 @@ MongoClient.connect('mongodb://' + connection_string, function(err, db) {
 	});
 
 	app.use(function(err, req, res, next) {
+		console.log("Error: " + err.message);
 		res.status(err.status || 500);
 		res.render('500', { error: err });
 	});
