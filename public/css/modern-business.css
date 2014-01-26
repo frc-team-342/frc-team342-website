@@ -16,6 +16,10 @@ body {
   padding-top: 50px; /* body padding for fixed top nav */
 }
 
+section {
+  padding-top: 50px; /* section padding due to fixed top nav. */
+}
+
 .img-home-portfolio,
 .img-customer,
 .portfolio-item {
@@ -127,13 +131,12 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 767px) {
-
-.carousel {
-  height: 70%; /* increases the carousel height so it looks good on phones */
+  .carousel {
+    height: 70%; /* increases the carousel height so it looks good on phones */
+  }
 }
 
-}
-
+/* Post Styles */
 .post {
   max-width: 100%;
   padding: 4px;
