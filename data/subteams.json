@@ -3,8 +3,8 @@ db.subteams.drop();
 var subteams = [
 	{
 		"name": "programming",
-		"about": "Something about programming.",
-		"image_url": "http://placehold.it/750x500",
+		"about": "The Programming subteam focuses on learning software development that work in conjunction with the Electrical and Mechanical teams to control the robot so it can move, shoot, climb, or dance! Students use the programming language Java and tools like Github to combine and store their code. ",
+		"image_url": "/images/programming.JPG",
 		"resources": [
 			{
 				"title": "GitHub Page",
@@ -13,9 +13,9 @@ var subteams = [
 		]
 	},
 	{
-		"name": "",
-		"about": "",
-		"image_url": "",
+		"name": "electrical",
+		"about": "The Electrical Engineering team installs and wires the electrical components of the robot; DC motors, controls, solenoid valves, sensors, circuit breakers, battery and fuses. They also program the robot for two phases of the match - autonomous and human-controlled. During the autonomous period the robot is controlled by the computer, with input from on board sensors. The second part of the match is human-controlled. The on-board computer takes input from the driver and controls operator, processes it, and sends signals to various outputs such as motor controls, and solenoids valves, etc.)",
+		"image_url": "/images/working2.jpg",
 		"resources": [
 			{
 				"title": "",
@@ -24,6 +24,44 @@ var subteams = [
 			{
 				"title": "",
 				"url": ""
+			}
+		]
+	},
+	{
+		"name": "mechanical",
+		"about": "The Mechanical Engineering team is responsible for building the robot, using the components furnished \"Kit of Parts\" along with parts designed and fabricated by Team 342. Students get hands-on-training in safe tool usage: hand tools and machine tools (cut-off saw, mill, lathe, grinder and drill press), then use these skills to fabricate parts and build the robot. In addition students learn about ball bearings, motors, drive systems (gears, belts, lead screws), pneumatics and fasteners (threaded fasteners, rivets, adhesives). They are also responsible for building a mock playing field for practice, and assembly and disassembly the pit area",
+		"image_url": "/images/mechanical.jpg",
+		"resources": [
+			{
+				"title": "",
+				"url": ""
+			},
+			{
+				"title": "",
+				"url": ""
+			}
+		]
+	},
+	{
+		"name": "chairmans",
+		"about": "There are many important skills outside building the robot. Community projects, mentorship, and teamwork are all stories that need to be captured, presented, and remixed to show how truely amazing Team 342 is. The Chairmen's team consists of the elite storytellers, graphic designers, musicians, and presenters that know how to \"Take the message Further\".\n\nOur talented 3D animation and graphic designers compete in the FIRST Satety Competitions and supports the rest of team 342. These students learn a lot of 2D graphics, 3D graphics, video editing, sound production, 3D animation and way, way more!",
+		"image_url": "/images/chairmens.jpg",
+		"resources": [
+			{
+				"title": "2014 Team 342 Safety Animation ",
+				"url": "http://youtu.be/5Z8PJgxIJDY"
+			},
+			{
+				"title": "Palmetto Regional Submission 2013",
+				"url": "http://youtu.be/dia0irRu9Qg"
+			},
+			{
+				"title": "Stop, Think, Act Safety Animation 2013",
+				"url": "http://youtu.be/EjRAUkyt-VU"
+			},
+			{
+				"title": "Take the Message Farther, 2010",
+				"url": "http://youtu.be/4Gyb8SoXaz8"
 			}
 		]
 	}
