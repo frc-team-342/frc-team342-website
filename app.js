@@ -62,6 +62,11 @@ MongoClient.connect('mongodb://' + connection_string, function(err, db) {
 		res.type('txt').send('Not found');
 	});
 
+	app.use(function(err, req, res, next) {
+		res.status(err.status || 500);
+		res.render('500', { error: err });
+	});
+
 	// Express middleware to populate 'req.cookies' so we can access cookies
 	app.use(express.cookieParser());
 
