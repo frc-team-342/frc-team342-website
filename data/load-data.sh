@@ -2,7 +2,7 @@
 
 MONGO_CMD="/usr/bin/mongo"
 DB="team342-site"
-DATA_FILES=("awards.json" "mentors.json" "schedule.json" "students.json")
+DATA_FILES=("awards.json" "mentors.json" "schedule.json" "students.json" "subteams.json")
 
 for data_file in "${DATA_FILES[@]}"
 do
