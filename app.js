@@ -43,7 +43,6 @@ MongoClient.connect('mongodb://' + connection_string, function(err, db) {
 		return ret;
 	};
 
-
 	app.use(function(req, res, next){
 		res.status(404);
 		
@@ -62,14 +61,6 @@ MongoClient.connect('mongodb://' + connection_string, function(err, db) {
 		// default to plain-text. send()
 		res.type('txt').send('Not found');
 	});
-
-	// app.use(function(err, req, res, next){
-	// 	if (err instanceof NotFound) {
-	// 			res.render('404');
-	// 	} else {
-	// 			next(err);
-	// 	}
-	// });
 
 	// Express middleware to populate 'req.cookies' so we can access cookies
 	app.use(express.cookieParser());
