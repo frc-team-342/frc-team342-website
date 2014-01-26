@@ -1,0 +1,36 @@
+db.subteams.drop();
+
+var subteams = [
+	{
+		"name": "",
+		"about": "",
+		"image_url": "",
+		"resources": [
+			{
+				"title": "",
+				"url": ""
+			},
+			{
+				"title": "",
+				"url": ""
+			}
+		]
+	},
+	{
+		"name": "",
+		"about": "",
+		"image_url": "",
+		"resources": [
+			{
+				"title": "",
+				"url": ""
+			},
+			{
+				"title": "",
+				"url": ""
+			}
+		]
+	}
+]
+
+for (var i = 0; i < subteams.length; i++) { db.subteams.insert(subteams[i]); }
