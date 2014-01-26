@@ -1,1 +1,76 @@
 <%- layout('../layout') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Team 342 <%= capitalize(name) %></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <img class="img-responsive" src="http://placehold.it/750x500">
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h4>About</h4></div>
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading"><h4>Resources</h4></div>
+        <div class="list-group">
+          <a class="list-group-item" href="" data-toggle="tooltip" title="">Team GitHub</a>
+          <a class="list-group-item" href="" data-toggle="tooltip" title="">Aerial Assist Robot - Source Code</a>
+          <a class="list-group-item" href="" data-toggle="tooltip" title="Ultimate Ascent Robot - Source Code">Ultimate Ascent Robot - Source Code</a>
+          <a class="list-group-item" href="" data-toggle="tooltip" title="">Rebound Rumble Robot - Source Code</a>
+          <a class="list-group-item" href="" data-toggle="tooltip" title="">Logomotion Robot - Source Code</a>
+          <a class="list-group-item" href="/schedules/programming" data-toggle="tooltip" title="">Team Schedule</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <h2 class="page-header">Students</h2>
+    </div>
+  </div>
+
+  <% for (var index = 0; index < students.length; index++) { %>
+  <% var student = students[index]; %>
+
+  <% if ((index % 3) == 0) { %>
+  <div class="row">
+  <% } %>
+
+  <%- include ../partials/student %>
+
+  <% if ((index % 3) == 2) { %>
+  </div>
+  <% } %>
+  <% } %> 
+
+  <div class="row">
+    <div class="col-lg-8">
+      <h2 class="page-header">Mentors</h2>
+    </div>
+  </div>
+
+  <% for(var index = 0; index < mentors.length; index++) { %>
+  <% var mentor = mentors[index]; %>
+
+  <% if ((index % 3) == 0) { %>
+  <div class="row">
+  <% } %>
+
+    <%- include ../partials/mentor %>
+
+  <% if ((index % 3) == 2) { %>
+  </div>
+  <% } %>
+  <% } %>
+  </div>
+</div>
