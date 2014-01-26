@@ -2,17 +2,13 @@ db.subteams.drop();
 
 var subteams = [
 	{
-		"name": "",
-		"about": "",
-		"image_url": "",
+		"name": "programming",
+		"about": "Something about programming.",
+		"image_url": "http://placehold.it/750x500",
 		"resources": [
 			{
-				"title": "",
-				"url": ""
-			},
-			{
-				"title": "",
-				"url": ""
+				"title": "GitHub Page",
+				"url": "http://github.com/frc-team-342"
 			}
 		]
 	},
