@@ -1,7 +1,9 @@
-<div class="col-sm-4">
-  <img class="img-responsive" src="http://placehold.it/750x450">
-  <h3><%= mentor.first_name %> <%= mentor.last_name %> <small><%= mentor.role %></small></h3>
+<div class="col-lg-3 col-md-3 col-sm-3 col-sm-1">
+  <img class="img-responsive" src="http://placehold.it/200x200">
+  <h3><%= mentor.first_name %> <%= mentor.last_name %></h3>
+  <% if (mentor.subteam != undefined && mentor.subteam != "") { %>
   <h4><%= mentor.subteam %></h4>
+  <% } %>
   <h4><a href="<%= mentor.company_url %>"><%= mentor.company_name %></a></h4>
 
   <ul class="list-unstyled list-inline list-social-icons">
