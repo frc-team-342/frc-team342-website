@@ -3,31 +3,36 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">Team 342 <%= capitalize(name) %></h1>
+      <h1 class="page-header">Team 342 <%= capitalize(subteam.name) %></h1>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-8">
-      <img class="img-responsive" src="http://placehold.it/750x500">
+      <img class="img-responsive" src="<%= subteam.image_url %>">
     </div>
 
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading"><h4>About</h4></div>
         <div class="panel-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+          <p><%= subteam.about %></p>
         </div>
       </div>
       <div class="panel panel-default">
         <div class="panel-heading"><h4>Resources</h4></div>
         <div class="list-group">
-          <a class="list-group-item" href="" data-toggle="tooltip" title="">Team GitHub</a>
+          <% for (var resource = 0; resource < subteam.resources.length; resource++) { %>
+          <a class="list-group-item" href="<%= subteam.resources[resource].url %>" data-toggle="tooltip" title="">
+            <%= subteam.resources[resource].title %>
+          </a>
+          <% } %>
+          <!-- <a class="list-group-item" href="" data-toggle="tooltip" title="">Team GitHub</a>
           <a class="list-group-item" href="" data-toggle="tooltip" title="">Aerial Assist Robot - Source Code</a>
           <a class="list-group-item" href="" data-toggle="tooltip" title="Ultimate Ascent Robot - Source Code">Ultimate Ascent Robot - Source Code</a>
           <a class="list-group-item" href="" data-toggle="tooltip" title="">Rebound Rumble Robot - Source Code</a>
           <a class="list-group-item" href="" data-toggle="tooltip" title="">Logomotion Robot - Source Code</a>
-          <a class="list-group-item" href="/schedules/programming" data-toggle="tooltip" title="">Team Schedule</a>
+          <a class="list-group-item" href="/schedules/programming" data-toggle="tooltip" title="">Team Schedule</a> -->
         </div>
       </div>
     </div>
