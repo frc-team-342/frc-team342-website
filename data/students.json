@@ -1,0 +1,27 @@
+db.students.drop();
+
+var students = [
+	{
+		"first_name": "Konnor",
+		"last_name": "McDowell",
+		"year": "Sophomore",
+		"grade": 10,
+		"subteam": "programming"
+	},
+	{
+		"first_name": "Karsten",
+		"last_name": "Sellers",
+		"year": "Freshman",
+		"grade": 9,
+		"subteam": "programming"
+	},
+	{
+		"first_name": "Tahir",
+		"last_name": "Steel",
+		"year": "Junior",
+		"grade": 11,
+		"subteam": "programming"
+	},
+]
+
+for (var i = 0; i < students.length; i++) { db.students.insert(students[i]); }

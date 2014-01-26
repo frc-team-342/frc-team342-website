@@ -1,0 +1,448 @@
+use team342-site;
+
+db.schedules.drop();
+
+var schedules = [
+{
+	"subteam": "programming",
+	"week": 1,
+	"title": "Week 1 - January 6th-11th, 2014",
+	"schedule": [
+		{
+			"date": ISODate("2014-01-06T00:00:00-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-06T16:00-05:00"),
+			"end_time": ISODate("2014-01-06T19:00:00-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Evaluate laptop condition.",
+				},
+				{
+					"task_id": 2,
+					"task": "Determine necessary tasks to prepare for season."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-07T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-07T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-07T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Update practice bot with basic driving program."
+				},
+				{
+					"task_id": 2,
+					"task": "Gather feedback from drive team."
+				}
+			],
+			"mentor": "George Hans"
+		},
+		{
+			"date": ISODate("2014-01-08T00:00:00.000-05:00"),
+			"location": "Bosch",
+			"start_time": ISODate("2014-01-08T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-08T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Assist mechanical and electrial team with prototyping efforts."
+				},
+				{
+					"task_id": 2,
+					"task": "Provide feedback on feasibility of solutions from a programming perspective."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-09T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-09T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-09T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Assist mechanical and electrical team with prototyping efforts."
+				},
+				{
+					"task_id": 2,
+					"task": "Create list of necessary software and tools necessary to update laptops."
+				},
+				{
+					"task_id": 3,
+					"task": "Create individual github accounts and fork 2014 robot repository."
+				}
+			],
+			"mentor": "Jonathan Hunter"
+		},
+		{
+			"date": ISODate("2014-01-11T00:00:00.000-05:00"),
+			"location": "Bosch",
+			"start_time": ISODate("2014-01-11T09:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-11T16:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Reimage team laptops."
+				},
+				{
+					"task_id": 2,
+					"task": "Update laptops with 2014 software and tools."
+				},
+				{
+					"task_id": 3,
+					"task": "Update practice bot with 2014 image and code."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		}
+	]
+},
+{
+	"subteam": "programming",
+	"week": 2,
+	"title": "Week 2 - January 13th-18th, 2014",
+	"schedule": [
+		{
+			"date": ISODate("2014-01-13T00:00:00-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-13T16:00-05:00"),
+			"end_time": ISODate("2014-01-13T19:00:00-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "Reimage remaining Lenovo developer laptop with Windows 7 and install FRC Utilities and Driver Station."
+				},
+				{
+					"task_id" : 2,
+					"task" : "Reimage current practice bot cRIO with 2014 Java image. (v52)"
+				},
+				{
+					"task_id" : 3,
+					"task" : "Create basic program for joystick control."
+				},
+				{
+					"task_id" : 4,
+					"task" : "Assist drive team as necessary in refining controls."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-14T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-14T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-14T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "Reimage current practice bot cRIO with 2014 Java image (v52)"
+				},
+				{
+					"task_id" : 2,
+					"task" : "Complete basic program for driving with joystick control."
+				},
+				{
+					"task_id" : 3,
+					"task" : "Assist drive team as necessary in refining controls or troubleshooting."
+				},
+				{
+					"task_id" : 4,
+					"task" : "Reimage IBM Thinkpads as time allows."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-15T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-15T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-15T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "TBD"
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-16T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-16T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-16T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "TBD"
+				}
+			],
+			"mentor": "Jonathan Hunter"
+		},
+		{
+			"date": ISODate("2014-01-11T00:00:00.000-05:00"),
+			"location": "Bosch",
+			"start_time": ISODate("2014-01-18T09:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-18T16:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "TBD"
+				}
+			],
+			"mentor": "Adam Brightwell"
+		}
+	]
+},
+{
+	"subteam": "programming",
+	"week": 3,
+	"title": "Week 3 - January 20th-25th, 2014",
+	"schedule": []
+},
+{
+	"subteam": "programming",
+	"week": 4,
+	"title": "Week 4 - January 27th-February 1st, 2014",
+	"schedule": []
+},
+{
+	"subteam": "programming",
+	"week": 5,
+	"title": "Week 5 - February 3rd-8th, 2014",
+	"schedule": []
+},
+{
+	"subteam": "programming",
+	"week": 6,
+	"title": "Week 6 - February 10th-15th, 2014",
+	"schedule": []
+},
+{
+	"subteam": "mechanical",
+	"week": 1,
+	"title": "Week 1 - January 6th-11th, 2014",
+	"schedule": [
+		{
+			"date": ISODate("2014-01-06T00:00:00-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-06T16:00-05:00"),
+			"end_time": ISODate("2014-01-06T19:00:00-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Evaluate laptop condition.",
+				},
+				{
+					"task_id": 2,
+					"task": "Determine necessary tasks to prepare for season."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-07T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-07T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-07T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Update practice bot with basic driving program."
+				},
+				{
+					"task_id": 2,
+					"task": "Gather feedback from drive team."
+				}
+			],
+			"mentor": "George Hans"
+		},
+		{
+			"date": ISODate("2014-01-08T00:00:00.000-05:00"),
+			"location": "Bosch",
+			"start_time": ISODate("2014-01-08T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-08T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Assist mechanical and electrial team with prototyping efforts."
+				},
+				{
+					"task_id": 2,
+					"task": "Provide feedback on feasibility of solutions from a programming perspective."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-09T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-09T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-09T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Assist mechanical and electrical team with prototyping efforts."
+				},
+				{
+					"task_id": 2,
+					"task": "Create list of necessary software and tools necessary to update laptops."
+				},
+				{
+					"task_id": 3,
+					"task": "Create individual github accounts and fork 2014 robot repository."
+				}
+			],
+			"mentor": "Jonathan Hunter"
+		},
+		{
+			"date": ISODate("2014-01-11T00:00:00.000-05:00"),
+			"location": "Bosch",
+			"start_time": ISODate("2014-01-11T09:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-11T16:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id": 1,
+					"task": "Reimage team laptops."
+				},
+				{
+					"task_id": 2,
+					"task": "Update laptops with 2014 software and tools."
+				},
+				{
+					"task_id": 3,
+					"task": "Update practice bot with 2014 image and code."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		}
+	]
+},
+{
+	"subteam": "mechanical",
+	"week": 2,
+	"title": "Week 2 - January 13th-18th, 2014",
+	"schedule": [
+		{
+			"date": ISODate("2014-01-13T00:00:00-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-13T16:00-05:00"),
+			"end_time": ISODate("2014-01-13T19:00:00-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "Reimage remaining Lenovo developer laptop with Windows 7 and install FRC Utilities and Driver Station."
+				},
+				{
+					"task_id" : 2,
+					"task" : "Reimage current practice bot cRIO with 2014 Java image. (v52)"
+				},
+				{
+					"task_id" : 3,
+					"task" : "Create basic program for joystick control."
+				},
+				{
+					"task_id" : 4,
+					"task" : "Assist drive team as necessary in refining controls."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-14T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-14T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-14T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "Reimage current practice bot cRIO with 2014 Java image (v52)"
+				},
+				{
+					"task_id" : 2,
+					"task" : "Complete basic program for driving with joystick control."
+				},
+				{
+					"task_id" : 3,
+					"task" : "Assist drive team as necessary in refining controls or troubleshooting."
+				},
+				{
+					"task_id" : 4,
+					"task" : "Reimage IBM Thinkpads as time allows."
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-15T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-15T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-15T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "TBD"
+				}
+			],
+			"mentor": "Adam Brightwell"
+		},
+		{
+			"date": ISODate("2014-01-16T00:00:00.000-05:00"),
+			"location": "FDHS",
+			"start_time": ISODate("2014-01-16T16:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-16T19:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "TBD"
+				}
+			],
+			"mentor": "Jonathan Hunter"
+		},
+		{
+			"date": ISODate("2014-01-11T00:00:00.000-05:00"),
+			"location": "Bosch",
+			"start_time": ISODate("2014-01-18T09:00:00.000-05:00"),
+			"end_time": ISODate("2014-01-18T16:00:00.000-05:00"),
+			"tasks": [
+				{
+					"task_id" : 1,
+					"task": "TBD"
+				}
+			],
+			"mentor": "Adam Brightwell"
+		}
+	]
+},
+{
+	"subteam": "mechanical",
+	"week": 3,
+	"title": "Week 3 - January 20th-25th, 2014",
+	"schedule": []
+},
+{
+	"subteam": "mechanical",
+	"week": 4,
+	"title": "Week 4 - January 27th-February 1st, 2014",
+	"schedule": []
+},
+{
+	"subteam": "mechanical",
+	"week": 5,
+	"title": "Week 5 - February 3rd-8th, 2014",
+	"schedule": []
+},
+{
+	"subteam": "mechanical",
+	"week": 6,
+	"title": "Week 6 - February 10th-15th, 2014",
+	"schedule": []
+}
+];
+
+for (var i = 0; i < schedules.length; i++) { db.schedules.insert(schedules[i]); }
