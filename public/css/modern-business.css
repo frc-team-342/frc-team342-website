@@ -148,3 +148,11 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.menu-item a {
+  color: #999;
+}
+
+.menu-item a:hover {
+  color: #fff;
+}
